@@ -15,6 +15,9 @@ from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.optimizers import RMSprop
+from tensorflow.python.client import device_lib
+
+print('DEVICES {}'.format(device_lib.list_local_devices()))
 
 batch_size = 128
 num_classes = 10
@@ -29,8 +32,8 @@ x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 x_train /= 255
 x_test /= 255
-print(x_train.shape[0], 'train samples')
-print(x_test.shape[0], 'test samples')
+# print(x_train.shape[0], 'train samples')
+# print(x_test.shape[0], 'test samples')
 
 # convert class vectors to binary class matrices
 y_train = keras.utils.to_categorical(y_train, num_classes)
