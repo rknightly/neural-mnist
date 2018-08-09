@@ -1,2 +1,5 @@
 tensorflow
 keras
+matplotlib
+jupyter
+ipykernel
